@@ -1,9 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import "./src/styles/globals.css";
 import { Platform, Text, View, Alert } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { Link } from 'expo-router';
+import '../globals.css';
 
 export default function App() {
 
@@ -24,7 +24,7 @@ export default function App() {
       <SafeAreaView style={{flex: 1}}>
         <View className="flex-1 items-center justify-center bg-dark-bg-dark">
           <Text className="text-accent-primary">Open up App.tsx to start working on youdr app!</Text>
-          <StatusBar style="auto" />
+          <Link href="/moments" push>Go</Link>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
